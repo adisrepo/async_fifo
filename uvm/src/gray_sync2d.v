@@ -14,7 +14,9 @@ reg [ADDRSIZE:0] o_ptr;
 reg [ADDRSIZE:0] temp_ptr;
 
 always @(posedge des_clk or negedge des_rst_n)
-    if (!des_rst_n) {o_ptr,temp_ptr} <= 0;
-    else {o_ptr,temp_ptr} <= {temp_ptr,i_ptr};
+    if (!des_rst_n) 
+	{o_ptr,temp_ptr} <= 0;
+    else
+	{o_ptr,temp_ptr} <= {temp_ptr,i_ptr};
 
 endmodule
